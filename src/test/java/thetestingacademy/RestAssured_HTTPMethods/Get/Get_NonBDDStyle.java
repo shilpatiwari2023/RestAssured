@@ -14,11 +14,14 @@ public class Get_NonBDDStyle {
     @Test
     public void test_GET_NonBDD(){
         String pin_code = "401107";
+        //Given
         r = RestAssured.given();
         r.baseUri("https://api.zippopotam.us");
         r.basePath("/IN/" + pin_code);
+        //when
         response = r.when().log().all().get();
         System.out.println(response.asString());
+        //then
         vr = response.then().log().all().statusCode(404);
     }
     @Test

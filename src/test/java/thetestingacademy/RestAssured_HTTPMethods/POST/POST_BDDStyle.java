@@ -12,14 +12,15 @@ public class POST_BDDStyle {
                 "    \"password\" : \"password123\"\n" +
                 "}'";
         RestAssured.given()
-                .baseUri("https://restful-booker.herokuapp.com")
-                .basePath("/auth")
-                .contentType(ContentType.JSON)
-                .log().all().body(payload)
+                       .baseUri("https://restful-booker.herokuapp.com")
+                       .basePath("/auth")
+                       .contentType(ContentType.JSON)
+                       .log().all().body(payload)
                 .when()
-                .log().all()
-                .post()
-                .then().log().all()
+                       .log().all()
+                       .post()
+                .then()
+                       .log().all()
                 .statusCode(200);
     }
 }
