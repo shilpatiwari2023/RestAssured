@@ -2,6 +2,8 @@ package thetestingacademy.TestNGExamples;
 
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.TmsLinks;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -20,7 +22,7 @@ public class RestAssured_Assertion {
     String token;
     Integer bookingID;
 
-    @Severity()
+    @Severity(SeverityLevel.CRITICAL)
     @Owner("Shilpa")
     @Description("TC1 = verify the booking")
     @Test
